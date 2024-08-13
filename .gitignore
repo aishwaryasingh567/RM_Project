@@ -1,0 +1,106 @@
+# Ignore vendor directory
+/vendor/
+
+# Ignore node_modules directory
+/node_modules/
+
+# Ignore environment configuration files
+.env
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+# Dependency directories
+/vendor/
+node_modules/
+
+# Composer lock file (optional, if you prefer to track it)
+# composer.lock
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+
+# Compiled PHP files
+*.phar
+
+# Cache directories
+/cache/
+# Ensure cache is excluded from commits
+
+# Build artifacts
+/build/
+# Exclude build artifacts from version control
+
+# Temporary files
+*.tmp
+*.swp
+
+# Testing directories and files
+/coverage/
+*.cover
+*.phpunit.result.cache
+
+# Laravel specific (if using Laravel framework)
+vendor/
+node_modules/
+.env
+.env.local
+.env.*.local
+storage/*.key
+*.log
+Homestead.yaml
+Homestead.json
+.phpunit.result.cache
+/.vscode/
+
+# Symfony specific (if using Symfony framework)
+/var/
+/vendor/
+/node_modules/
+/.env
+/.env.local
+/.env.*.local
+/.phpunit.result.cache
+
+# Drupal specific (if using Drupal CMS)
+sites/default/files/
+sites/default/private/
+*.sql
+*.sqlite
+*.log
+
+# Magento specific (if using Magento eCommerce)
+/generated/
+/var/
+/pub/static/
+!.htaccess
+!*.xml
+!*.css
+!*.js
+
+# WordPress specific (if using WordPress CMS)
+wp-content/uploads/
+wp-config.php
+.htaccess
+
+# Custom entries
+# Add your specific files or directories here
+

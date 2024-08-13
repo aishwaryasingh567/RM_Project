@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: link to your CSS file -->
+    <style>
+        /* Add some basic styling */
+        
+        
+        main {
+            margin-top: 3em;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="content"></div>
+    <div id="footer"></div>
+
+    <script>
+        function loadHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading file:', error));
+        }
+
+        loadHTML('header', 'header.html');
+        loadHTML('footer', 'footer.html');
+
+        const contentMap = {
+            'home': 'home.html',
+            'about': 'about.html',
+            'contact': 'contact.html'
+        };
+
+        function loadPageContent() {
+            const page = location.hash.substring(1) || 'home';
+            const url = contentMap[page];
+            loadHTML('content', url);
+        }
+
+        window.addEventListener('hashchange', loadPageContent);
+        window.addEventListener('load', loadPageContent);
+    </script>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("profileDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.profile-icon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
